@@ -1,0 +1,8 @@
+<div (mouseenter)="onHover()" *appShouldShowText="post" class="card my-2 rounded-0">
+    <div class="card-body">
+        <div class="container-fluid">
+            <h5 class="card-heading">@{{post?.postedBy}}</h5>
+            <p appPostText class="card-text">{{post?.text}}</p>
+        </div>
+    </div>
+</div>
