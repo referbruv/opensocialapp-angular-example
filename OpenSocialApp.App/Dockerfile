@@ -9,4 +9,4 @@ COPY . .
 RUN ng build --prod
 
 FROM nginx as runtime
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist/OpenSocialApp /usr/share/nginx/html

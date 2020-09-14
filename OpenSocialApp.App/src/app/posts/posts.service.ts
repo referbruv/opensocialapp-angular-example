@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class PostsService {
     private posts: Post[] = [];
     private postsUpdatedSubs$ = new Subject<Post[]>();
-    private apiUri = "https://localhost:5002/api";
+    private apiUri = "http://localhost:80/api";
 
     constructor(private http: HttpClient) { }
 

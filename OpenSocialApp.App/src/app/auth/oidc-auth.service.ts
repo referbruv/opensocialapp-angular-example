@@ -8,10 +8,11 @@ import { Subject, Observable } from 'rxjs';
 export class OidcAuthService {
 
     private config: UserManagerSettings = {
-        authority: 'https://localhost:5001/',
+        // the Domain where the STS runs
+        authority: 'http://localhost:5002/',
         client_id: 'angular_spa',
-        redirect_uri: 'http://localhost:4200/auth/auth-callback?id=1234',
-        post_logout_redirect_uri: 'http://localhost:4200/',
+        redirect_uri: 'http://localhost:80/auth/auth-callback?id=1234',
+        post_logout_redirect_uri: 'http://localhost:80/',
         response_type: "id_token",
         scope: "openid profile email",
         filterProtocolClaims: true,

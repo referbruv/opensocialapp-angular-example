@@ -72,9 +72,10 @@ namespace ids4.simple
                     ClientName = "Angular 4 Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowedScopes = new List<string> { "openid", "profile", "api1", "email" },
-                    RedirectUris = new List<string> { "http://localhost:4200/auth/auth-callback?id=1234" },
-                    PostLogoutRedirectUris = new List<string> { "http://localhost:4200/" },
-                    AllowedCorsOrigins = new List<string> { "http://localhost:4200" },
+                    // The Angular app runs on localhost:80 (ngnix) with / route
+                    RedirectUris = new List<string> { "http://localhost:80/auth/auth-callback?id=1234" },
+                    PostLogoutRedirectUris = new List<string> { "http://localhost:80/" },
+                    AllowedCorsOrigins = new List<string> { "http://localhost:80" },
                     AllowAccessTokensViaBrowser = true
                 },
                 new Client

@@ -34,7 +34,8 @@ namespace OpenSocialApp.Api
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
-                options.Authority = "https://localhost:5001/";
+                // the STS runs in this Domain
+                options.Authority = "https://localhost:5002/";
                 options.TokenValidationParameters = new TokenValidationParameters {
                     ValidateAudience = false
                 };
